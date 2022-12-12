@@ -45,6 +45,12 @@ class Todolist:
         json_object = json.dumps(Todolist.instances, indent=2)
         with open('file.json', 'w') as f:
             f.write(json_object)
+    
+    @classmethod
+    def read(cls):
+        with open('file.json', 'r') as f:
+            content = f.read()
+            print(content)
 
 
 l1 = Todolist(1, 'Clean your room', '2022-12-19', 'Open')
@@ -53,3 +59,4 @@ l2.change_task_status(Status.In_Progress.value)
 
 Todolist.print()
 Todolist.save()
+TodoList.read()
