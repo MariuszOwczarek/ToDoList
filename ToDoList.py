@@ -49,6 +49,7 @@ class Todolist:
 
 l1 = Todolist(1, 'Clean your room', '2022-12-19', 'Open')
 l2 = Todolist(2, 'Cook dinner for Family', '2022-12-24', 'Open')
+l2.change_task_status(Status.In_Progress.value)
 
 Todolist.print()
 Todolist.save()
